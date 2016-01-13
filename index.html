@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript">
+        function refresh() {
+            $('#content').load('/arduino/Temperature');
+            $('#Humidity').load('/arduino/Humidity');
+        }
+    </script>
+</head>
+<body onload="setInterval(refresh,500);">
+  <center>
+    <h1>目前溫度攝氏:<span id="content"></span></h1>
+    <h1>目前濕度:<span id="Humidity"></span>%</h1>
+  </center>
+</body>
